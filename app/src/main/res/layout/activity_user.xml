@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.administrator.flyfish.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/girl"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="信息"
+        android:textSize="24dp"
+        android:drawableLeft="@drawable/mail"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通知"
+        android:textSize="24dp"
+        android:drawableLeft="@drawable/notice"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="24dp"
+        android:drawableLeft="@drawable/setting"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="个人中心"
+        android:layout_marginTop="10dp"
+        android:textSize="24dp"
+        android:drawableLeft="@drawable/fail"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:textColor="#000"
+        />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <LinearLayout
+        android:id="@+id/LL_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        >
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信息库"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner_area"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/area"
+        android:background="@drawable/user"
+        android:layout_below="@id/LL_title"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/spinner_area"
+        android:entries="@array/category"
+        android:background="@drawable/user"
+        android:layout_below="@id/LL_title"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_order"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/spinner_category"
+        android:entries="@array/order"
+        android:background="@drawable/user"
+        android:layout_below="@id/LL_title"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/LL_first"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+        <com.example.administrator.flyfish.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/boy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="秦东"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/poem"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableBottom="@drawable/like"
+                android:layout_gravity="end"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/LL_first"
+        android:id="@+id/LL_second"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+        <com.example.administrator.flyfish.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/girl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="非鱼"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fish"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@drawable/like"
+                android:layout_gravity="end"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+<include layout="@layout/bottom_ui"></include>
+
+</RelativeLayout>

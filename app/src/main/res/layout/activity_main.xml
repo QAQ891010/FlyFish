@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RL_title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <LinearLayout
+            android:id="@+id/LL_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="信息库"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner_area"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/area"
+            android:paddingLeft="5dp"
+            android:foregroundGravity="center"
+            android:layout_below="@id/LL_title"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner_area"
+            android:entries="@array/category"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/LL_title"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_order"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner_category"
+            android:entries="@array/order"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/LL_title"
+            />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/Fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_menu"
+        android:layout_below="@+id/RL_title">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </FrameLayout>
+
+    <!--<include layout="@layout/bottom_ui"></include>-->
+
+    <LinearLayout android:id="@+id/tab_menu"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <TextView
+            android:id="@+id/txt_deal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="信息库"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/txt_poi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/qunzu"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="校友圈"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/person"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="#000"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
