@@ -8,72 +8,11 @@
     tools:context=".MainActivity"
     >
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/RL_title"
-        android:layout_width="match_parent"
-        android:layout_height="65dp">
-
-        <LinearLayout
-            android:id="@+id/LL_title"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-
-            >
-            <TextView
-                android:id="@+id/tv_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="信息库"
-                android:textColor="#000000"
-                android:textSize="20sp"/>
-
-        </LinearLayout>
-
-        <Spinner
-            android:id="@+id/spinner_area"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/area"
-            android:paddingLeft="5dp"
-            android:foregroundGravity="center"
-            android:layout_below="@id/LL_title"
-            />
-
-        <Spinner
-            android:id="@+id/spinner_category"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/spinner_area"
-            android:entries="@array/category"
-            android:paddingLeft="5dp"
-            android:layout_below="@id/LL_title"
-            />
-
-        <Spinner
-            android:id="@+id/spinner_order"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/spinner_category"
-            android:entries="@array/order"
-            android:paddingLeft="5dp"
-            android:layout_below="@id/LL_title"
-            />
-
-    </RelativeLayout>
-
-
     <FrameLayout
         android:id="@+id/Fl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab_menu"
-        android:layout_below="@+id/RL_title">
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+        android:layout_above="@+id/tab_menu">
     </FrameLayout>
 
     <!--<include layout="@layout/bottom_ui"></include>-->
@@ -94,6 +33,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:drawableTop="@drawable/home"
+
             android:gravity="center"
             android:textColor="#000"
             android:text="信息库"
