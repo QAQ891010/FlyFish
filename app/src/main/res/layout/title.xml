@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="65dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/LL_title"
+    <LinearLayout android:id="@+id/LL_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
@@ -21,30 +20,62 @@
 
     </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spinner_area"
-        android:layout_width="130dp"
+    <LinearLayout android:id="@+id/spinner_title"
+        android:layout_below="@+id/LL_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/area"
-        android:layout_below="@id/LL_title"
-        />
+        android:orientation="horizontal">
 
-    <Spinner
-        android:id="@+id/spinner_category"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/spinner_area"
-        android:entries="@array/category"
-        android:layout_below="@id/LL_title"
-        />
+        <Spinner
+            android:id="@+id/spinner_area"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:entries="@array/area"
+            android:layout_below="@id/LL_title"
+            />
 
-    <Spinner
-        android:id="@+id/spinner_order"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/spinner_category"
-        android:entries="@array/order"
-        android:layout_below="@id/LL_title"
-        />
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner_area"
+            android:entries="@array/category"
+            android:layout_below="@id/LL_title"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_order"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spinner_category"
+            android:entries="@array/order"
+            android:layout_below="@id/LL_title"
+            />
+
+
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_school"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/spinner_title"-->
+        <!--android:text="南昌大学"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textColor="#000"-->
+        <!--android:layout_marginTop="10dp"/>-->
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/recycler_view"
+       android:layout_below="@+id/spinner_title"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+
 
 </RelativeLayout>

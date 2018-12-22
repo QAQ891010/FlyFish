@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title">
+
+
+        <TextView
+            android:id="@+id/TV_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="招生分数线"
+            android:layout_margin="5dp"
+            android:textSize="13dp"
+            android:textColor="#000" />
+
+
+        <LinearLayout android:id="@+id/LL_spine"
+            android:layout_below="@+id/TV_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/time"
+            />
+
+            <Spinner
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/type"
+                />
+
+            <Spinner
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/area"
+                />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

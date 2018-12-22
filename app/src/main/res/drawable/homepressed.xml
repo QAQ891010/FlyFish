@@ -2,17 +2,33 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <!-- pressed -->
-    <item android:drawable="@drawable/home_fill"
-        android:state_enabled="true"
-        android:state_pressed="true"/>
+    <!--&lt;!&ndash; pressed &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/home_fill"-->
+        <!--android:state_enabled="true"-->
+        <!--android:state_pressed="true"/>-->
 
-    <!-- focused -->
-    <item android:drawable="@drawable/home_fill"
-        android:state_enabled="true"
-        android:state_focused="true"/>
+    <!--<item android:state_selected="true"-->
+        <!--android:drawable="@drawable/home_fill"-->
+        <!--/>-->
 
-    <!-- normal -->
+
+    <!--&lt;!&ndash; focused &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/home_fill"-->
+        <!--android:state_enabled="true"-->
+        <!--android:state_focused="true"/>-->
+
+    <!--&lt;!&ndash; normal &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/home" />-->
+
+    <item android:drawable="@drawable/home_fill"
+        android:state_selected="true"
+        android:state_pressed="true"
+        />
     <item android:drawable="@drawable/home"
-        android:state_enabled="true"/>
+        android:state_selected="false"/>
+    <item android:state_selected="true"
+        android:drawable="@drawable/home_fill"
+        />
+
+
 </selector>

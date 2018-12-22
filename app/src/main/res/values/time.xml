@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time">
+        <item>2018年</item>
+        <item>2017年</item>
+        <item>2016年</item>
+        <item>2015年</item>
+        <item>2014年</item>
+
+    </string-array>
+
+    <string-array name="type">
+        <item>文科</item>
+        <item>理科</item>
+    </string-array>
+</resources>

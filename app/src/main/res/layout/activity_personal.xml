@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/LL_home"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/title"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:src="@drawable/back32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="主页"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/LL_home"
+        android:src="@drawable/personal" />
+
+    <ImageView
+        android:id="@+id/tou"
+        android:layout_below="@+id/bg_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/boy"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_toRightOf="@+id/tou"
+        android:layout_below="@+id/bg_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="秦东"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+
+    <TextView
+        android:id="@+id/line5"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tou"
+        android:background="@drawable/title"
+        android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_poem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="少年听雨歌楼上。红烛昏罗帐。壮年听雨客舟中。江阔云低、断雁叫西风。
+而今听雨僧庐下。鬓已星星也。悲欢离合总无情。一任阶前、点滴到天明。"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line5"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="关注" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="私信" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

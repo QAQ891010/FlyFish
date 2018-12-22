@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchoolActivity">
+
+    <LinearLayout android:id="@+id/school_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back32"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/title_school"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="大学信息"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/LL_btn"
+        android:layout_below="@+id/school_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/intro"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="简介"
+            />
+        <Button
+            android:id="@+id/line_school"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="分数线"
+            />
+
+        <Button
+            android:id="@+id/view_school"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="校园风光"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/Fl_school"
+        android:layout_below="@+id/LL_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,9 +1,9 @@
 package com.example.administrator.flyfish;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null){
+        if (actionBar != null) {
             actionBar.hide();
         }
 
@@ -39,12 +39,19 @@ public class MainActivity extends AppCompatActivity {
         fragment_home = new Fragment_Home();
 
 
+
+
+        getSupportFragmentManager().beginTransaction().add(R.id.Fl_main,fragment_home).commitAllowingStateLoss();
+
+
+
         TV_deal = findViewById(R.id.txt_deal);
         TV_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main,fragment_home).commitAllowingStateLoss();
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main, fragment_home).commitAllowingStateLoss();
             }
         });
 
@@ -55,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Intent intent = new Intent(MainActivity.this,FriendActivity.class);
 //
-                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main,fragment_friend).commitAllowingStateLoss();
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main, fragment_friend).commitAllowingStateLoss();
             }
         });
 
@@ -66,13 +73,12 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(MainActivity.this,UserActivity.class);
 //                startActivity(intent);
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main,fragment_user).commitAllowingStateLoss();
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fl_main, fragment_user).commitAllowingStateLoss();
             }
         });
 
-
-
-
-
     }
+
+
+
 }
