@@ -59,5 +59,10 @@
         <item>专科</item>
     </string-array>
 
+    <string-array name="order2">
+        <item>本一批</item>
+        <item>本二批</item>
+        <item>专科批</item>
+    </string-array>
 
 </resources>
