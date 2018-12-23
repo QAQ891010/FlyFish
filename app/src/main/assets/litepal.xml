@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="FlyFish" ></dbname>
+
+    <version value="1" ></version>
+    <list>
+        <mapping class="com.example.administrator.flyfish.Entity.School"></mapping>
+        <mapping class="com.example.administrator.flyfish.Entity.Area"></mapping>
+    </list>
+</litepal>
