@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.administrator.flyfish.R;
 import com.example.administrator.flyfish.School;
@@ -31,11 +33,12 @@ public class Fragment_Home extends Fragment {
 
     private Button btn_change;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.title,container,false);
-
+        initSchool();
         return view;
 
     }
@@ -83,7 +86,7 @@ public class Fragment_Home extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        //super.onViewCreated(view, savedInstanceState);
 
 //        btn_change = view.findViewById(R.id.btn_school);
 //        btn_change.setOnClickListener(new View.OnClickListener() {
@@ -95,13 +98,45 @@ public class Fragment_Home extends Fragment {
 //        });
 
 
-        initSchool();
-        recyclerView = (RecyclerView) view.findViewById(R.id.list_view_school);
+
+        //获取RecyclerView
+        recyclerView =  view.findViewById(R.id.list_view_school);
 //        recyclerView.setAdapter(new SchoolAdapter(schoolList));
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        SchoolAdapter adapter = new SchoolAdapter(schoolList);
-        recyclerView.setAdapter(adapter);
+        //创建Adapter
+        SchoolAdapter schoolAdapter   = new SchoolAdapter(getActivity(),schoolList);
+        //给RecyclerView设置Adapter
+        recyclerView.setAdapter(schoolAdapter);
+
+
+        schoolAdapter.setOnItemClickListener(new SchoolAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                Intent intent = new Intent(getActivity(),SchoolActivity.class);
+               startActivity(intent);
+            }
+            @Override
+            public void onLongClick(int position) {
+                Toast.makeText(getActivity(),"您长按点击了"+position+"行",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+
+
+//        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
+
+        //RecyclerView中没有item的监听事件，需要自己在适配器中写一个监听事件的接口。参数根据自定义
+//        schoolAdapter.setOnItemClickListener(new SchoolAdapter.OnItemClickListener() {
+//            @Override
+//            public void OnItemClick(View view, School data) {
+//                Toast.makeText(getActivity(),"我是item",Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
     }
