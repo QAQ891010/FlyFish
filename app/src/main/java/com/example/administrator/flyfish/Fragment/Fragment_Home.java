@@ -27,9 +27,8 @@ import java.util.List;
 public class Fragment_Home extends Fragment {
 
     private List<School> schoolList = new ArrayList<>();
-    private RecyclerView recyclerView;
 
-    private ListView listView;
+    private RecyclerView recyclerView;
 
     private Button btn_change;
 
@@ -102,14 +101,14 @@ public class Fragment_Home extends Fragment {
         //获取RecyclerView
         recyclerView =  view.findViewById(R.id.list_view_school);
 //        recyclerView.setAdapter(new SchoolAdapter(schoolList));
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity() );
         recyclerView.setLayoutManager(layoutManager);
         //创建Adapter
         SchoolAdapter schoolAdapter   = new SchoolAdapter(getActivity(),schoolList);
         //给RecyclerView设置Adapter
         recyclerView.setAdapter(schoolAdapter);
 
-
+        //RecyclerView中没有item的监听事件，需要自己在适配器中写一个监听事件的接口。参数根据自定义
         schoolAdapter.setOnItemClickListener(new SchoolAdapter.OnItemClickListener() {
             @Override
             public void onClick(int position) {
@@ -124,13 +123,9 @@ public class Fragment_Home extends Fragment {
 
 
 
-
-
-
-
 //        recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL));
 
-        //RecyclerView中没有item的监听事件，需要自己在适配器中写一个监听事件的接口。参数根据自定义
+
 //        schoolAdapter.setOnItemClickListener(new SchoolAdapter.OnItemClickListener() {
 //            @Override
 //            public void OnItemClick(View view, School data) {
